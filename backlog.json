@@ -1,0 +1,97 @@
+[
+  {
+    "title": "Initialize FastAPI project structure",
+    "body": "As a developer, I need to initialize a FastAPI project structure so that I have a clean starting point for backend code.",
+    "labels": ["epic:bootstrap", "SSC:1"]
+  },
+  {
+    "title": "Configure package dependencies",
+    "body": "As a developer, I need to configure package dependencies (fastapi, uvicorn, httpx, sqlalchemy, pgvector, etc.) so that my code can use external services.",
+    "labels": ["epic:bootstrap", "SSC:1"]
+  },
+  {
+    "title": "Connect Supabase Postgres and enable pgvector",
+    "body": "As a developer, I need to connect Supabase Postgres and verify vector extension (pgvector) is enabled.",
+    "labels": ["epic:bootstrap", "SSC:1"]
+  },
+  {
+    "title": "Define SQL DDL for optimization_runs table",
+    "body": "As a developer, I need to define SQL DDL to create optimization_runs table to store optimization request and result data.",
+    "labels": ["epic:db", "SSC:1"]
+  },
+  {
+    "title": "Define SQL DDL for optimization_embeddings table",
+    "body": "As a developer, I need to define SQL DDL to create optimization_embeddings table to store vector embeddings of optimization requests.",
+    "labels": ["epic:db", "SSC:1"]
+  },
+  {
+    "title": "Implement SQLAlchemy ORM models",
+    "body": "As a developer, I need to implement SQLAlchemy ORM models for these tables so that I can write/read records easily from Python code.",
+    "labels": ["epic:db", "SSC:1"]
+  },
+  {
+    "title": "Build QNN API client for predictions",
+    "body": "As a developer, I need to build a QNN API client using httpx to call /api/v1/predictions/predict so that I can send optimization requests.",
+    "labels": ["epic:qnn-client", "SSC:2"]
+  },
+  {
+    "title": "Build QNN API client for health check",
+    "body": "As a developer, I need to build a QNN health check client to call /api/v1/health/simple to verify API availability.",
+    "labels": ["epic:qnn-client", "SSC:1"]
+  },
+  {
+    "title": "Build /forecast endpoint",
+    "body": "As an operator, I need a POST /forecast route to submit load forecast requests and store results.",
+    "labels": ["epic:endpoints", "SSC:2"]
+  },
+  {
+    "title": "Build /storage-optimize endpoint",
+    "body": "As an operator, I need a POST /storage-optimize route to submit storage optimization requests and store results.",
+    "labels": ["epic:endpoints", "SSC:2"]
+  },
+  {
+    "title": "Build /grid-switch-optimize endpoint",
+    "body": "As an operator, I need a POST /grid-switch-optimize route to submit grid switching optimization requests and store results.",
+    "labels": ["epic:endpoints", "SSC:2"]
+  },
+  {
+    "title": "Build /health endpoint",
+    "body": "As a developer, I need a GET /health route that calls QNN /health/simple to verify external API status.",
+    "labels": ["epic:endpoints", "SSC:1"]
+  },
+  {
+    "title": "Compute embeddings for optimization requests",
+    "body": "As a developer, I need to compute embeddings for each optimization request and store vectors into optimization_embeddings.",
+    "labels": ["epic:embeddings", "SSC:3"]
+  },
+  {
+    "title": "Integrate embedding function for vector generation",
+    "body": "As a developer, I need to integrate an embedding function (OpenAI or local) for encoding optimization input payloads.",
+    "labels": ["epic:embeddings", "SSC:2"]
+  },
+  {
+    "title": "Write test payloads for forecast, storage, and grid switching",
+    "body": "As a developer, I need to write simple test payloads for forecast, storage, and grid switching to verify API logic.",
+    "labels": ["epic:testing", "SSC:1"]
+  },
+  {
+    "title": "Test full pipeline end-to-end",
+    "body": "As a developer, I need to manually test the full pipeline from API request to QNN call to DB storage.",
+    "labels": ["epic:testing", "SSC:1"]
+  },
+  {
+    "title": "Validate vector inserts",
+    "body": "As a developer, I need to validate vector inserts for embedding table to ensure correctness.",
+    "labels": ["epic:testing", "SSC:1"]
+  },
+  {
+    "title": "Write README for demo and setup instructions",
+    "body": "As a developer, I need to create a simple README with instructions to run, test, and demo the API.",
+    "labels": ["epic:deployment", "SSC:1"]
+  },
+  {
+    "title": "Prepare environment for local or dockerized demo",
+    "body": "As a developer, I need to containerize or configure local environment to ensure portable demo experience.",
+    "labels": ["epic:deployment", "SSC:1"]
+  }
+]
